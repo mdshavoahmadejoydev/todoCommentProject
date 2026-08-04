@@ -1,0 +1,135 @@
+
+/* ========================
+common css start
+======================== */
+*{
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  background: #e5e7eb;
+}
+
+.container{
+  width: 520px;
+  margin: auto;
+  background: white;
+  padding: 20px 15px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.15);
+}
+
+
+.commonBtn1{
+  padding: 5px 10px;
+  background: rgb(6, 40, 112);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  display: inline-block;
+  border-radius: 10px;
+  border: none;
+}
+
+
+
+/* ========================
+common css end
+======================== */
+
+
+
+/* ========================
+main css start
+======================== */
+#nickname{
+  display: block;
+  width: 98%;
+  height: 30px;
+  background: #f8fafc;
+  border-radius: 10px;
+  border: 1.5px solid transparent;
+  outline: none;
+  padding-left: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+#comment{
+  display: block;
+  width: 98%;
+  height: 50px;
+  background: #f8fafc;
+  border-radius: 10px;
+  border: 1.5px solid transparent;
+  outline: none;
+  padding-left: 10px;
+  padding-top: 10px;
+  margin-bottom: 15px;
+  margin-top: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.publishBtn{
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-weight: 700;
+  background: #2563eb !important;
+}
+.publishBtn:hover{
+  box-shadow: 1px 1px 2px 0px rgb(27, 27, 27);
+}
+.ubdateBtn{
+  margin-bottom: 20px;
+  cursor: pointer;
+  background: #10b981;
+  font-weight: 700;
+  display: none;
+}
+.ubdateBtn:hover{
+  box-shadow: 1px 1px 2px 0px rgb(27, 27, 27);
+}
+
+
+.nicknameText{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+.commentText{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 5px 0px;
+}
+
+
+.editBtn{
+  background: #f59e0b;
+  font-size: 12px;
+  cursor: pointer;
+}
+.deleteBtn{
+  background: #ef4444;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+
+
+.card{
+  padding-bottom: 20px;
+}
+
+
+
+.noPost{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+}
+
+
+/* ========================
+main css start
+======================== */
