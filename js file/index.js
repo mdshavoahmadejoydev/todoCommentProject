@@ -53,14 +53,72 @@ publishBtn.addEventListener("click", ()=> {
 })
 
 ubdateBtn.addEventListener("click", ()=> {
-  arr[indexStore].nickname = nickname.value;
-  arr[indexStore].comment = comment.value;
-  cardContainer.innerHTML = "";
-  displayStatus();
-  nickname.value = "";
-  comment.value = "";
-  ubdateBtn.style.display="none";
-  publishBtn.style.display="inline-block";
+
+  if (nickname.value && comment.value) {
+    arr[indexStore].nickname = nickname.value;
+    arr[indexStore].comment = comment.value;
+    cardContainer.innerHTML = "";
+    displayStatus();
+    nickname.value = "";
+    comment.value = "";
+    ubdateBtn.style.display = "none";
+    publishBtn.style.display = "inline-block";
+    comment.style.border = "1.5px solid transparent";
+    nickname.style.border = "1.5px solid transparent";
+  } else {
+    if (!nickname.value && !comment.value) {
+      nickname.style.border = "1.5px solid red";
+      comment.style.border = "1.5px solid red";
+      let speech = new SpeechSynthesisUtterance("Please Write something");
+      speechSynthesis.speak(speech);
+    } else {
+      if (nickname.value) {
+        // nickname.style.border = "1.5px solid transparent";
+        // comment.style.border = "1.5px solid red";
+        let speech = new SpeechSynthesisUtterance("Please Write your comment");
+        speechSynthesis.speak(speech);
+        nickname.style.border = "1.5px solid transparent";
+        comment.style.border = "1.5px solid red";
+      } else if (comment.value) {
+        // comment.style.border = "1.5px solid transparent";
+        // nickname.style.border = "1.5px solid red";
+        let speech = new SpeechSynthesisUtterance("Please Write your nickname");
+        speechSynthesis.speak(speech);
+        comment.style.border = "1.5px solid transparent";
+        nickname.style.border = "1.5px solid red";
+      }
+    }
+  }
+
+
+
+
+  // if (nickname.value && comment.value) {
+  //   arr[indexStore].nickname = nickname.value;
+  //   arr[indexStore].comment = comment.value;
+  //   cardContainer.innerHTML = "";
+  //   displayStatus();
+  //   nickname.value = "";
+  //   comment.value = "";
+  //   ubdateBtn.style.display = "none";
+  //   publishBtn.style.display = "inline-block";
+  // } else {
+  //   nickname.style.border="1.5px solid red";
+  //   comment.style.border="1.5px solid red";
+  //   let speech = new SpeechSynthesisUtterance("Please Write something");
+  //   speechSynthesis.speak(speech);
+  // }
+
+
+
+  // arr[indexStore].nickname = nickname.value;
+  // arr[indexStore].comment = comment.value;
+  // cardContainer.innerHTML = "";
+  // displayStatus();
+  // nickname.value = "";
+  // comment.value = "";
+  // ubdateBtn.style.display="none";
+  // publishBtn.style.display="inline-block";
 });
 
 function displayStatus() {
