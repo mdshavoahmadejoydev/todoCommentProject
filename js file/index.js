@@ -14,6 +14,8 @@ let noPost = document.querySelector(".noPost")
 let arr = []
 var indexStore;
 
+noPostTitle();
+
 publishBtn.addEventListener("click", ()=> {
   if (nickname.value && comment.value) {
     nickname.style.border = "1.5px solid transparent";
